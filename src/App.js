@@ -7,11 +7,12 @@ import RequireAuth from './Components/Login/RequireAuth';
 // import Login from './Components/Home/Login';
 import Header from './Components/Navbar/Header';
 import Register from './Components/Register/Register';
+import ToData from './Components/TodoFrom/ToData';
 import TodoFrom from './Components/TodoFrom/TodoFrom';
 
 function App() {
   return (
-    <div className="App">
+    <div >
 
       <Header></Header>
       <Routes>
@@ -20,6 +21,11 @@ function App() {
         <Route path='/todoFrom' element={
           <RequireAuth>
             <TodoFrom></TodoFrom>
+          </RequireAuth>
+        }></Route>
+        <Route path='/todoData' element={
+          <RequireAuth>
+            <ToData></ToData>
           </RequireAuth>
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
