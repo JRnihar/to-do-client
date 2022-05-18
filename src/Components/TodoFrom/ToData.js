@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import useData from '../../Hooks/useData';
 import ShowData from './ShowData';
 
@@ -20,6 +21,10 @@ const ToData = () => {
                     }
                 </div>
          </div>
+            <div className='text-center justify-content-center mt-5 mb-5'>
+                <Link to="/todoFrom"> <button className='btn btn-dark text-white '>Add</button> </Link>
+         </div>
+            
         </div>
     );
 };

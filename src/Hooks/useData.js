@@ -4,7 +4,7 @@ const useData = () => {
     const [lists, setList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/list')
+        fetch('https://tranquil-mountain-71827.herokuapp.com/list')
             .then(res => res.json())
             .then(data => setList(data));
     }, [lists])

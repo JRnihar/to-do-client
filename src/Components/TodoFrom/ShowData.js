@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import useData from '../../Hooks/useData';
 
 const ShowData = ({list}) => {
@@ -11,7 +12,7 @@ const ShowData = ({list}) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/list/${id}`;
+            const url = `https://tranquil-mountain-71827.herokuapp.com/list/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -25,22 +26,23 @@ const ShowData = ({list}) => {
     }
 
     return (
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card">
-                   
+       <div>
+            <div className='mt-5'>
+                <div class="col">
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+
                         <div class="card-body">
                             <h5 class="card-title"> Name : {list.name}</h5>
-                        <p class="card-text"> Description : {list.description}</p>
-                        <button className='btn btn-danger' onClick={() => handleDelete(list._id)}>Delete</button>
+                            <p class="card-text"> Description : {list.description}</p>
+                            <button className='btn btn-danger' onClick={() => handleDelete(list._id)}>Delete</button>
                         </div>
-                        
+
+                    </div>
                 </div>
+
+               
             </div>
-            
-            
-            
-        </div>
+       </div>
     );
 };
 

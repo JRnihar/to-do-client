@@ -7,7 +7,7 @@ const TodoFrom = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/list`;
+        const url = `https://tranquil-mountain-71827.herokuapp.com/list`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -22,7 +22,7 @@ const TodoFrom = () => {
             })
     }
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto align-items-center mt-5'>
             <div>
                 <h2>TO-Do-From</h2>
             </div>
