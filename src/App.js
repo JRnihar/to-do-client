@@ -16,7 +16,11 @@ function App() {
 
       <Header></Header>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={
+          <RequireAuth>
+            <Home></Home>
+          </RequireAuth>
+        }></Route>
        
         <Route path='/todoFrom' element={
           <RequireAuth>
