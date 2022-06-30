@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 import useData from '../../Hooks/useData';
@@ -33,8 +34,9 @@ const ShowData = ({list}) => {
 
                         <div class="card-body">
                             <h5 class="card-title"> Name : {list.name}</h5>
-                            <p class="card-text"> Description : {list.description}</p>
-                            <button className='btn btn-danger' onClick={() => handleDelete(list._id)}>Delete</button>
+                            <p class="card-text"><i class="fa-solid fa-clipboard-list me-3"></i> {list.task}</p>
+                            <button className='btn btn-danger me-3' onClick={() => handleDelete(list._id)}>Delete</button>
+                            <Link to={`/editTask/${list._id}`}><button className='btn btn-success' >Edit</button></Link>
                         </div>
 
                     </div>

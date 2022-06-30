@@ -7,6 +7,7 @@ const TodoFrom = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
+        // const url = `https://tranquil-mountain-71827.herokuapp.com/list`;
         const url = `https://tranquil-mountain-71827.herokuapp.com/list`;
         fetch(url, {
             method: 'POST',
@@ -28,7 +29,7 @@ const TodoFrom = () => {
             </div>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-3' placeholder='you name' {...register("name", { required: true })} />
-                <input className='mb-3' placeholder='you description  ' {...register("description")} />
+                <input className='mb-3' placeholder='Add your Task' {...register("task")} />
                 <input className='mb-3' type="submit" value='Add' />
             </form>
         </div>
