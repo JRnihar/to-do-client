@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './Components/Home/Footer';
 import Home from './Components/Home/Home';
 
 
@@ -36,6 +37,7 @@ function App() {
         }></Route>
         
       </Routes>
+      <Footer></Footer>
     </div >
   );
 }
